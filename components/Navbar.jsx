@@ -41,9 +41,8 @@ const Navbar = () => {
           }}
         >
           <Image src="/assets/logo.svg" alt='logo' className='object-contain' width={27} height={27} />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            Eray Aynacı &nbsp;
-            <span className='sm:block hidden'> | Frontend Developer</span>
+          <p className='text-white text-xl font-bold cursor-pointer flex'>
+            ENIGMA
           </p>
         </Link>
 
