@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+
 import classNames from "classnames";
 import { navLinks } from "../constants";
 
@@ -25,7 +27,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={classNames("w-full flex items-center py-5 fixed top-0 z-20 sm:px-16 px-6",
+      className={classNames("w-full flex items-center py-5 fixed top-0 z-20 px-16 lg:px-8",
         scrolled ? "bg-primary" : "bg-transparent"
       )}
     >
@@ -38,7 +40,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src="/assets/logo.svg" alt='logo' className='w-9 h-9 object-contain' />
+          <Image src="/assets/logo.svg" alt='logo' className='object-contain' width={27} height={27} />
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
             Eray Aynacı &nbsp;
             <span className='sm:block hidden'> | Frontend Developer</span>
@@ -60,10 +62,12 @@ const Navbar = () => {
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
-          <img
-            src={toggle ? "/assets/close.svg" : "/assets/close.svg"}
+          <Image
+            src={toggle ? "/assets/close.svg" : "/assets/menu.svg"}
             alt='menu'
-            className='w-[28px] h-[28px] object-contain'
+            className='object-contain'
+            width={28}
+            height={28}
             onClick={() => setToggle(!toggle)}
           />
 
@@ -76,9 +80,9 @@ const Navbar = () => {
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                  className={classNames("font-poppins font-medium cursor-pointer text-[16px]",
                     active === nav.title ? "text-white" : "text-secondary"
-                  }`}
+                  )}
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(nav.title);
