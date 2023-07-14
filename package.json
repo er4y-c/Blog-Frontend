@@ -4,7 +4,10 @@
   "description": "A client for Blog Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -20,9 +23,12 @@
     "@emailjs/browser": "^3.11.0",
     "@react-three/drei": "^9.78.2",
     "@react-three/fiber": "^8.13.5",
+    "autoprefixer": "^10.4.14",
+    "classnames": "^2.3.2",
     "framer-motion": "^10.12.21",
     "maath": "^0.7.0",
     "next": "^13.4.9",
+    "postcss": "^8.4.26",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-tilt": "^1.0.2",
