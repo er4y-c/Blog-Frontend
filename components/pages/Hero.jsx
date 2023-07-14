@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { styles } from "../styles/styles";
-import { ComputersCanvas } from "./canvas";
+import { styles } from "../../styles/styles";
+import { ComputersCanvas } from "../canvas";
 
 const Hero = () => {
   return (
@@ -15,7 +15,7 @@ const Hero = () => {
         </div>
 
         <div>
-          <h1 className={`${styles.heroHeadText} text-white text-7xl`}>
+          <h1 className={`${styles.heroHeadText} text-white text-5xl lg:text-7xl`}>
             Hi, I'm <span className='text-[#915EFF]'>Eray</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100 text-xl`}>
