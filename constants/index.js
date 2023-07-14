@@ -15,16 +15,13 @@ import {
     git,
     figma,
     docker,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
     carrent,
     jobit,
     tripguide,
     threejs,
-  } from "../public/assets";
-  
+  } from "/public/assets";
+
+
   export const navLinks = [
     {
       id: "about",
@@ -114,7 +111,7 @@ import {
     {
       title: "React.js Developer",
       company_name: "Starbucks",
-      icon: starbucks,
+      icon: "/assets/company/starbucks.png",
       iconBg: "#383E56",
       date: "March 2020 - April 2021",
       points: [
@@ -127,7 +124,7 @@ import {
     {
       title: "React Native Developer",
       company_name: "Tesla",
-      icon: tesla,
+      icon: "/assets/company/tesla.png",
       iconBg: "#E6DEDD",
       date: "Jan 2021 - Feb 2022",
       points: [
@@ -140,7 +137,7 @@ import {
     {
       title: "Web Developer",
       company_name: "Shopify",
-      icon: shopify,
+      icon: "/assets/company/shopify.png",
       iconBg: "#383E56",
       date: "Jan 2022 - Jan 2023",
       points: [
@@ -153,7 +150,7 @@ import {
     {
       title: "Full stack Developer",
       company_name: "Meta",
-      icon: meta,
+      icon: "/assets/company/meta.png",
       iconBg: "#E6DEDD",
       date: "Jan 2023 - Present",
       points: [
