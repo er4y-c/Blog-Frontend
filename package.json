@@ -1,0 +1,34 @@
+{
+  "name": "blog-frontend",
+  "version": "1.0.0",
+  "description": "A client for Blog Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/er4y-c/Blog-Frontend.git"
+  },
+  "author": "Eray Aynacı",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/er4y-c/Blog-Frontend/issues"
+  },
+  "homepage": "https://github.com/er4y-c/Blog-Frontend#readme",
+  "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "@react-three/drei": "^9.78.2",
+    "@react-three/fiber": "^8.13.5",
+    "framer-motion": "^10.12.21",
+    "maath": "^0.7.0",
+    "next": "^13.4.9",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-tilt": "^1.0.2",
+    "react-vertical-timeline-component": "^3.6.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
