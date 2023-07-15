@@ -55,55 +55,47 @@ import {
   const technologies = [
     {
       name: "HTML 5",
-      icon: html,
+      icon: "/assets/tech/html.png",
     },
     {
       name: "CSS 3",
-      icon: css,
+      icon: "/assets/tech/css.png",
     },
     {
       name: "JavaScript",
-      icon: javascript,
+      icon: "/assets/tech/javascript.png",
     },
     {
       name: "TypeScript",
-      icon: typescript,
+      icon: "/assets/tech/typescript.png",
     },
     {
       name: "React JS",
-      icon: reactjs,
+      icon: "/assets/tech/reactjs.png",
     },
     {
       name: "Redux Toolkit",
-      icon: redux,
+      icon: "/assets/tech/redux.png",
     },
     {
       name: "Tailwind CSS",
-      icon: tailwind,
+      icon: "/assets/tech/tailwind.png",
     },
     {
       name: "Node JS",
-      icon: nodejs,
+      icon: "/assets/tech/nodejs.png",
     },
     {
       name: "MongoDB",
-      icon: mongodb,
+      icon: "/assets/tech/mongodb.png",
     },
     {
       name: "Three JS",
-      icon: threejs,
+      icon: "/assets/tech/threejs.svg",
     },
     {
       name: "git",
-      icon: git,
-    },
-    {
-      name: "figma",
-      icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
+      icon: "/assets/tech/git.png",
     },
   ];
   
