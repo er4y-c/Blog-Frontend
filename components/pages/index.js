@@ -4,7 +4,6 @@ import About from '../pages/About';
 import Tech from '../pages/Tech';
 import Experience from '../pages/Experience';
 import Works from '../pages/Works';
-import Feedbacks from '../pages/Feedbacks';
 import Contact from '../pages/Contact';
 
 export {
@@ -13,7 +12,6 @@ export {
   Tech,
   Experience,
   Works,
-  Feedbacks,
   Contact,
   EarthCanvas, 
   BallCanvas, 

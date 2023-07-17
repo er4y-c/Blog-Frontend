@@ -1,5 +1,5 @@
 import React from 'react';
-import { About, Contact, Experience, Feedbacks, Hero, Tech, Works, StarsCanvas } from "../components/pages";
+import { About, Contact, Experience, Hero, Tech, Works, StarsCanvas } from "../components/pages";
 import Navbar from "../components/Navbar";
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
         <Experience />
         <Tech />
         <Works />
-        <Feedbacks />
+
         <div className='relative z-0'>
           <Contact />
           <StarsCanvas />
