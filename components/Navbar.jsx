@@ -40,7 +40,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <Image src="/assets/logo.svg" alt='logo' className='object-contain' width={27} height={27} />
+          <Image src="/assets/logo.png" alt='logo' className='object-contain' width={27} height={27} />
           <p className='text-white text-xl font-bold cursor-pointer flex'>
             ENIGMA
           </p>

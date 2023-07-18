@@ -1,27 +1,3 @@
-import {
-    mobile,
-    backend,
-    creator,
-    web,
-    javascript,
-    typescript,
-    html,
-    css,
-    reactjs,
-    redux,
-    tailwind,
-    nodejs,
-    mongodb,
-    git,
-    figma,
-    docker,
-    carrent,
-    jobit,
-    tripguide,
-    threejs,
-  } from "/public/assets";
-
-
   export const navLinks = [
     {
       id: "about",
@@ -40,15 +16,15 @@ import {
   const services = [
     {
       title: "Frontend Developer",
-      icon: web,
+      icon: "/assets/web.png",
     },
     {
       title: "Backend Developer",
-      icon: backend,
+      icon: "/assets/backend.png",
     },
     {
       title: "Author",
-      icon: creator,
+      icon: "/assets/creator.png",
     },
   ];
   
