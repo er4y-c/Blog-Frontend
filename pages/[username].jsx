@@ -1,16 +1,24 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router'
 import { About, Contact, Experience, Hero, Tech, Works, StarsCanvas } from "../components/pages";
 import Navbar from "../components/Navbar";
 import { portfolio_services } from '../services/portfolio';
 
-const Home = () => {
+const PortfolioPage = () => {
+  const router = useRouter();
+  const { username } = router.query;
+  const [userPort, setUserPort] = useState(null);
+
   useEffect(() => {
-    portfolio_services.get_user_portfolio("er4y-c")
-    .then((res)=>{
-      console.log(res);
-    })
-  },[]);
+    if(username) {
+        portfolio_services.get_user_portfolio(username)
+        .then((res) => {
+            setUserPort(res);
+        })
+    }
+  }, [username]);
+
   return (
     <>
       <Head>
@@ -43,4 +51,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default PortfolioPage;

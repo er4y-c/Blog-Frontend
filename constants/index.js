@@ -58,7 +58,7 @@
       icon: "/assets/tech/tailwind.png",
     },
     {
-      name: "Node JS",
+      name: "ExpressJS",
       icon: "/assets/tech/nodejs.png",
     },
     {
