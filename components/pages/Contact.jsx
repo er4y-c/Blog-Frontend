@@ -132,9 +132,6 @@ const Contact = () => {
               <p>Send</p>
             </div>
           </button>
-          <div className="bg-green-900 p-4 rounded-2xl">
-            <p className="text-sm">Thank you. I will get back to you as soon as possible.</p>
-          </div>
         </form>
       </motion.div>
 

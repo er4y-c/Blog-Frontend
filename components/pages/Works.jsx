@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../../styles/styles";
 import SectionContainer from "../SectionContainer";
 import ProjectCard from "../ProjectCard";
-import { projects } from "../../constants";
 import { fadeIn, textVariant } from "../../utils/motion";
+import { PortfolioContext } from "../../context/portfolio";
 
 const Works = () => {
+  const { userPort } = useContext(PortfolioContext);
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -25,8 +26,15 @@ const Works = () => {
       </div>
 
       <div className='mt-20 flex flex-wrap gap-7'>
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+        {userPort?.projects?.map((project, index) => (
+          <ProjectCard
+            key={`project-${index}`}
+            index={index}
+            source_code_link={project?.link}
+            tags={project?.tags}
+            name={project?.title}
+            description={project?.description}
+          />
         ))}
       </div>
     </>

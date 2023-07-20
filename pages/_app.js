@@ -1,8 +1,11 @@
 import React from "react";
 import "../styles/global.css";
+import { PortfolioContextProvider } from "../context/portfolio";
 
 export default function App({ Component, pageProps }) {
     return(
-        <Component {...pageProps} />
+        <PortfolioContextProvider>
+            <Component {...pageProps} />
+        </PortfolioContextProvider>
     );
 };

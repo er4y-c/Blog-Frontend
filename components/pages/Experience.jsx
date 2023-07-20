@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 import ExperienceCard from "../ExperienceCard";
-import { experiences } from "../../constants";
 import SectionContainer from "../SectionContainer";
 import { textVariant } from "../../utils/motion";
+import { PortfolioContext } from "../../context/portfolio";
 
 const Experience = () => {
+  const { userPort } = useContext(PortfolioContext);
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -21,7 +22,7 @@ const Experience = () => {
 
       <div className='mt-20 flex flex-col'>
         <VerticalTimeline>
-          {experiences.map((experience, index) => (
+          {userPort?.experiences?.map((experience, index) => (
             <ExperienceCard
               key={`experience-${index}`}
               experience={experience}

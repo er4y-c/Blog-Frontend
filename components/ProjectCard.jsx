@@ -25,7 +25,7 @@ const ProjectCard = ({
           <div className='relative w-full h-[230px]'>
             <Image
               src={image}
-              alt='project_image'
+              alt={`Project-${index} image`}
               className='rounded-2xl'
               fill
             />
@@ -56,7 +56,7 @@ const ProjectCard = ({
                 key={`${name}-${tag.name}`}
                 className={`text-[14px] ${tag.color}`}
               >
-                #{tag.name}
+                #{tag}
               </p>
             ))}
           </div>
