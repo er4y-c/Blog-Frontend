@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router'
 import { About, Contact, Experience, Hero, Tech, Works, StarsCanvas } from "../components/pages";
@@ -7,7 +7,7 @@ import { PortfolioContext } from '../context/portfolio';
 
 const PortfolioPage = () => {
   const router = useRouter();
-  const { userPort, loading, fetchPortfolio, setUsername } = useContext(PortfolioContext);
+  const { setUsername } = useContext(PortfolioContext);
   const { username } = router.query;
   useEffect(() => {
     setUsername(username);
