@@ -27,7 +27,7 @@ const AuthProvider = ({ children }) => {
     if(!token && !publicRoutes.includes(router.pathname)) {
        router.replace("/");
     }
-  }, []);
+  }, [router.pathname]);
 
   const login = async(email, password) => {
     const { token } = await auth_services.login(email, password);
