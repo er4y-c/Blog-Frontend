@@ -2,15 +2,10 @@ import React, { useEffect } from 'react';
 import Head from 'next/head';
 import { About, Contact, Experience, Hero, Tech, Works, StarsCanvas } from "../components/pages";
 import Navbar from "../components/Navbar";
-import { portfolio_services } from '../services/portfolio';
+
 
 const Home = () => {
-  useEffect(() => {
-    portfolio_services.get_user_portfolio("er4y-c")
-    .then((res)=>{
-      console.log(res);
-    })
-  },[]);
+  
   return (
     <>
       <Head>
@@ -25,19 +20,10 @@ const Home = () => {
 
       </Head>
       <div className='relative z-0 bg-primary'>
-          <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center pt-16'>
+          <div className='bg-primary bg-cover bg-no-repeat bg-center pt-16'>
             <Navbar />
-            <Hero />
           </div>
-          <About />
-          <Experience />
-          <Tech />
-          <Works />
-
-          <div className='relative z-0'>
-            <Contact />
-            <StarsCanvas />
-          </div>
+          <div className='h-screen'>Ana sayfa</div>
       </div>
     </>
   );
