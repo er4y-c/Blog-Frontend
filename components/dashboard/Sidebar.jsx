@@ -6,7 +6,7 @@ import { dashboardLinks } from '../../constants';
 
 const Sidebar = () => {
   return (
-    <div className='bg-gray-600 flex flex-col items-center lg:w-1/6 h-screen'>
+    <div className='bg-gray-600 flex flex-col items-center lg:w-1/5 h-screen'>
       <div className='flex flex-col justify-center items-center gap-y-2 mt-12'>
         <Image src="/assets/logo.png" width={50} height={50} priority />
         <p className='font-semibold text-2xl text-white'>ENIGMA</p>

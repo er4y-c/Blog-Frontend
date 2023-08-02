@@ -4,15 +4,18 @@ import { portfolio_services } from '../services/portfolio';
 export const PortfolioContext = createContext();
 
 export const PortfolioContextProvider = ({ children }) => {
-    const [userPort, setUserPort] = useState({});
-    const [username, setUsername] = useState("");
+  const [userPort, setUserPort] = useState({});
+  const [username, setUsername] = useState("");
   const [loading, setLoading] = useState(true);
   const fetchPortfolio = async (username) => {
+    if(username) {
     await portfolio_services.get_user_portfolio(username)
-        .then((res) => {
-            setUserPort(res);
-            setLoading(false);
-        });
+      .then((res) => {
+        setUserPort(res);
+        setLoading(false);
+    });
+    }
+    
   };
   useEffect(()=>{
     fetchPortfolio(username);

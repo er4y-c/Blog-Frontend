@@ -11,7 +11,7 @@ const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const router = useRouter();
-  const publicRoutes = ["/", "/login", "/blogs"];
+  const protectedRoutes = ["/dashboard",];
 
   useEffect(() => {
     const token = Cookies.get('token');
@@ -24,8 +24,8 @@ const AuthProvider = ({ children }) => {
       }
     }
 
-    if(!token && !publicRoutes.includes(router.pathname)) {
-       router.replace("/");
+    if(!token && protectedRoutes.includes(router.pathname)) {
+       router.replace("/login");
     }
   }, [router.pathname]);
 

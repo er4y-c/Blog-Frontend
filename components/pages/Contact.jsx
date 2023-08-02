@@ -74,7 +74,7 @@ const Contact = () => {
 
   return (
     <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+      className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden"
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
@@ -125,7 +125,7 @@ const Contact = () => {
           <button
             type='submit'
             disabled={loading}
-            className={classNames('bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary', loading && "opacity-75")}
+            className={classNames('bg-[#915EFF] py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary', loading && "opacity-75")}
           >
             <div className="flex gap-x-4">
               { loading && <Image src="/assets/90-ring-with-bg.svg" alt="spinner" width={25} height={25}/> }
