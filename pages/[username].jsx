@@ -1,20 +1,14 @@
-import React, { useEffect, useContext } from 'react';
+import React from 'react';
 import Head from 'next/head';
-import { useRouter } from 'next/router'
+
 import { About, Contact, Experience, Hero, Tech, Works, StarsCanvas } from "../components/pages";
 import Navbar from "../components/Navbar";
-import { PortfolioContext } from '../context/portfolio';
+import { PortfolioContextProvider } from '../context/portfolio';
 
 const PortfolioPage = () => {
-  const router = useRouter();
-  const { setUsername } = useContext(PortfolioContext);
-  const { username } = router.query;
-  useEffect(() => {
-    setUsername(username);
-  }, [username]);
 
   return (
-    <>
+    <PortfolioContextProvider>
       <Head>
         <title>Eray Aynacı | Frontend Developer</title>
         <meta name="title" content="Eray Aynacı | Frontend Developer" />
@@ -41,7 +35,7 @@ const PortfolioPage = () => {
             <StarsCanvas />
           </div>
       </div>
-    </>
+      </PortfolioContextProvider>
   );
 };
 

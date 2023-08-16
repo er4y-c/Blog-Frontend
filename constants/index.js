@@ -34,3 +34,13 @@ export const dashboardLinks = [
     icon : "/assets/dashboard/portfolio.png"
   },
 ];
+
+export const COLORS = [
+  "#DC2626",
+  "#D97706",
+  "#2563EB",
+  "#9333EA",
+  "#C026D3",
+  "#DB2777",
+  "#DB2777"
+];

@@ -24,7 +24,7 @@ const Experience = () => {
         <VerticalTimeline>
           {userPort?.experiences?.map((experience, index) => (
             <ExperienceCard
-              key={`experience-${index}`}
+              key={{index}}
               experience={experience}
             />
           ))}

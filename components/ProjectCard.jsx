@@ -3,6 +3,7 @@ import Image from "next/image";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
+import { COLORS } from "../constants";
 
 const ProjectCard = ({
     index,
@@ -20,14 +21,15 @@ const ProjectCard = ({
             scale: 1,
             speed: 450,
           }}
-          className='bg-tertiary p-5 rounded-2xl sm:w-[360px] h-[400px] w-full'
+          className='bg-tertiary p-5 rounded-2xl sm:w-[360px] h-[500px] w-full'
         >
           <div className='relative w-full'>
             <Image
-              src={image}
+              src={`${image}`}
               alt={`Project-${index} image`}
               className='rounded-2xl'
-              fill
+              width={400}
+              height={400}
             />
   
             <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
@@ -50,11 +52,11 @@ const ProjectCard = ({
             <p className='mt-2 text-secondary text-[14px]'>{description}</p>
           </div>
   
-          <div className='mt-4 flex flex-wrap gap-2'>
-            {tags.map((tag) => (
+          <div className='mt-4 flex flex-wrap gap-2 absolute bottom-5'>
+            {tags.map((tag, index) => (
               <p
-                key={`${name}-${tag?.name}`}
-                className={`text-[14px] ${tag?.color}`}
+                key={index}
+                className={`text-[14px] text-[${COLORS[index]}]`}
               >
                 #{tag}
               </p>

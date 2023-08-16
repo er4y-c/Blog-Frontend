@@ -28,12 +28,13 @@ const Works = () => {
       <div className='mt-20 flex flex-wrap gap-7'>
         {userPort?.projects?.map((project, index) => (
           <ProjectCard
-            key={`project-${index}`}
+            key={index}
             index={index}
             source_code_link={project?.link}
             tags={project?.tags}
             name={project?.title}
             description={project?.description}
+            image={project?.imagePath}
           />
         ))}
       </div>
