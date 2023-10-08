@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { dashboardLinks } from '../../constants';
+import { AuthContext } from '../../context/auth';
 
 const Sidebar = () => {
+  const  { setActivePage } = useContext(AuthContext);
   return (
     <div className='bg-gray-600 flex flex-col items-center lg:w-1/5 h-screen'>
       <div className='flex flex-col justify-center items-center gap-y-2 mt-12'>
@@ -14,7 +16,7 @@ const Sidebar = () => {
       <div className='flex flex-col gap-y-4 mt-8'>
         {
           dashboardLinks.map((item)=>(
-            <Link href={item?.link}>
+            <Link href={item?.link} onClick={() => setActivePage(item?.title)}>
               <div className='flex gap-x-2'>
                 <Image src={item?.icon} width={20} height={20} />
                 <span className="text-sm text-gray-300">{item?.title}</span>

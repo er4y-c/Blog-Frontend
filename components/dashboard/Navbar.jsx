@@ -4,8 +4,7 @@ import Image from "next/image";
 import { AuthContext } from "../../context/auth";
 
 const Navbar = () => {
-  const { logout, user } = useContext(AuthContext);
-  const [activePage, setActivePage] = useState("Dashboard");
+  const { logout, user, activePage } = useContext(AuthContext);
 
   return (
     <div className='bg-transparent flex flex-row justify-between px-8 pt-8 h-16 w-full'>

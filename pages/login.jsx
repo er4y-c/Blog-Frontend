@@ -11,7 +11,6 @@ const LoginPage = () => {
   const { login } = useContext(AuthContext);
 
   const handleSubmit = async (values) => {
-    console.log('Form submitted:', values);
     await login(values?.email, values?.password);
   };
 

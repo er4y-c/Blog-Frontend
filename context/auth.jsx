@@ -10,6 +10,7 @@ const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [activePage, setActivePage] = useState("Dashboard");
   const router = useRouter();
   const protectedRoutes = ["/dashboard",];
 
@@ -43,13 +44,15 @@ const AuthProvider = ({ children }) => {
     Cookies.remove('token');
     Cookies.remove('user-info');
     setUser(null);
-    router.replace('/');
+    router.replace('/login');
   };
 
   const context = {
     user,
     login,
-    logout
+    logout,
+    activePage,
+    setActivePage,
   }
   return (
     <AuthContext.Provider value={context}>
